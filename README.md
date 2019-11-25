@@ -86,7 +86,7 @@ List of keys in order of which to apply the growing value.
 ## Statics
 
 ### fill(object, val, keys, overwrite)
-<details><summary>operates as a targeted fill function for an existing **Array** or **Object.**</summary>
+<details><summary>operates as a targeted fill function for an existing **Array** or <strong>Object.</strong></summary>
 
 * **object**
 **Type:** **Array** || **Object**
