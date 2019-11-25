@@ -16,10 +16,8 @@ import {[Desired Class]} from svz-managers;
 ```  
 
 
-<details><summary>
-	# ObjectManager(object)
-Manipulates a supplied **Array** or **Object** as needed for a variety of use cases.
-</summary>
+# ObjectManager(object, callbacks)
+<details><summary>Manipulates a supplied **Array** or **Object** as needed for a variety of use cases.</summary>
 <p>
 
 ## Class Variables
@@ -31,7 +29,8 @@ the **Array** or **Object** ObjectManager is using.
 Whether **this.object** is an **Array** or **Object**
 
 * **callbacks**  
-The array of functions used in **runCallbacks()**
+**Type:** **Array** of **function**s || **function**
+The array of functions used in **runCallbacks()**, or the first function in that array.
 
 
 ## Methods
@@ -65,7 +64,7 @@ The function to be added.</details>
 The function to be removed.</details>
 
 ### sequential(callback, init, keysOrLength)
-Applies a sequentially determined value as key values in **this.object**.
+<details><summary>Applies a sequentially determined value as key values in **this.object**.</summary>
 
 * **callback**  
 **Optional**  
@@ -82,10 +81,30 @@ First value. The second value is callback(init), and so forth.
 **Optional**  
 **Type:** **Array**  
 List of keys in order of which to apply the growing value.
+</details>
 
 ## Statics
 
-### fill(val, keys, noOverwrite, object)
+### fill(object, val, keys, overwrite)
+<details><summary>operates as a targeted fill function for an existing **Array** or **Object.**</summary>
+
+* **object**
+**Type:** **Array** || **Object**
+The target of the function.
+
+* **val**
+The value that will be used to fill each specified key value.
+
+* **keys**
+**Type: Array**
+The keys targeted by the function. If not specified, all existing keys will be targeted.
+
+* **overwrite**
+**Type: Boolean**
+**Default: true**
+Determines whether to overwrite currently not undefined values.
+
+</details>
 
 ### filter (object, test)
 Applies a function similar to Array.prototype.filter, but is also usable on Objects.
@@ -117,6 +136,18 @@ The target of the function.
 **Type: function**  
 **Syntax:** **callback**(value, key)  
 The function run for each of the values in the **Object** or **Array**.
+
+### makeFill(val, keysOrLength)
+<details><summary>creates an **Array** or **Object** with the specified key values or length.</summary>
+
+* **val**
+The value which will be used for each entry.
+
+* **keysOrLength**
+**Type:** **Array** || **Number**
+Either a an **Array** of the keys to which the value will be initialized or a **Number** stating how long the **Array** will be.
+
+</details>
 
 ### map(object, callback)
 Runs a map function through each entry in the **Object** or **Array**
