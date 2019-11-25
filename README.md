@@ -28,7 +28,7 @@ the **Array** or **Object** ObjectManager is using.
 
 * **type**  
 **Read Only**  
-Whether this.object is an **Array** or **Object**
+Whether **this.object** is an **Array** or **Object**
 
 * **callbacks**  
 The array of functions used in **runCallbacks()**
@@ -37,28 +37,24 @@ The array of functions used in **runCallbacks()**
 ## Methods
 
 ### filter (test)
-Applies a function similar to Array.prototype.filter, but can also be applied to Objects. Applied to **this.object**
-
-<details><summary>Additional Details</summary>
+<details><summary>Applies a function similar to Array.prototype.filter, but can also be applied to Objects. Applied to **this.object**</summary>
 
 *Has **static** version*  
 * **test**  
 **Type:** **function**  
 **Default:** e => e  
-Applied to each entry, and removing entries resolving to **false**.
-
-</details>
+Applied to each entry, and removing entries resolving to **false**.</details>
 
 ### runCallbacks()
 Runs each function in the **callbacks** array for each entry in **object**
 
 ### addCallback(callback)
-Adds function to **callbacks** Class Variable.  
+<details><summary>Adds function to **callbacks** Class Variable.</summary>
 
 * **callback**  
 **Type:** **function**  
 **Syntax:** callback(entry, index)
-The function to be added.
+The function to be added.</details>
 
 ### removeCallback(callback)
 Removes a callback from **callbacks** Class Variable.
