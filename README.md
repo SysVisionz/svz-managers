@@ -15,11 +15,11 @@ then, in your react project,
 import {[Desired Class]} from svz-managers;
 ```  
 
-# ObjectManager(object)
 
-**Use:** Manipulates a supplied **Array** or **Object** as needed for a variety of use cases.  
-
-<details><summary>Details</summary>
+<details><summary>
+	# ObjectManager(object)
+Manipulates a supplied **Array** or **Object** as needed for a variety of use cases.
+</summary>
 <p>
 
 ## Class Variables
@@ -57,12 +57,12 @@ Runs each function in the **callbacks** array for each entry in **object**
 The function to be added.</details>
 
 ### removeCallback(callback)
-Removes a callback from **callbacks** Class Variable.
+<details><summary>Removes a callback from **callbacks** Class Variable.</summary>
 
 * **callback**  
 **Type: function**  
 **Syntax:** callback(entry, index)  
-The function to be removed.
+The function to be removed.</details>
 
 ### sequential(callback, init, keysOrLength)
 Applies a sequentially determined value as key values in **this.object**.
