@@ -37,14 +37,15 @@ The array of functions used in **runCallbacks()**
 ## Methods
 
 ### filter (test)
-*Has **static** version*  
 Applies a function similar to Array.prototype.filter, but can also be applied to Objects. Applied to **this.object**
 
+<details><summary>Additional Details</summary>
+*Has **static** version*  
 * **test**  
 **Type:** **function**  
 **Default:** e => e  
 Applied to each entry, and removing entries resolving to **false**.
-
+</details>
 ### runCallbacks()
 Runs each function in the **callbacks** array for each entry in **object**
 
